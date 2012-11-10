@@ -1,4 +1,5 @@
 <%= simple_form_for @post, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
   <%= f.input :title %>
   <%= f.input :tag_list, :hint => "Enter Tags separated by commas" %>
   <%= f.input :content, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Full' } %>

@@ -21,4 +21,8 @@ class Post < ActiveRecord::Base
 	    Tag.where(name: n.strip).first_or_create!
 	  end
 	end
+
+	validates :title, presence: true
+	validates :tag_list, presence: true
+	validates :content, presence: true
 end
