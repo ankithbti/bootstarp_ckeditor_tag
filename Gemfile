@@ -9,6 +9,9 @@ gem 'rails', '3.2.8'
 gem 'simple_form'
 gem "ckeditor", "3.7.3"
 gem "paperclip"
+gem "therubyracer"
+	gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+	gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 #gem 'acts-as-taggable-on'
 
 group :development, :test do
@@ -24,9 +27,7 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-	gem "therubyracer"
-	gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-	gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+	
 	gem 'sass-rails',   '~> 3.2.3'
 	gem 'coffee-rails', '~> 3.2.1'
 
