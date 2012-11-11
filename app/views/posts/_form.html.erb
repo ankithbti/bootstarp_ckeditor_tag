@@ -1,8 +1,10 @@
-<%= simple_form_for @post, :html => { :class => 'form-horizontal' } do |f| %>
+<%= simple_form_for @post, :html => { :class => 'form-horizontal'} do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <%= f.input :title %>
-  <%= f.input :tag_list, :hint => "Enter Tags separated by commas" %>
+  <%= f.input :tag_list, :hint => "Enter Tags separated by commas", :autocomplete => "off" %>
   <%= f.input :content, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Full' } %>
+
+  <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name, {}, {multiple: true  } %> 
   <div class="form-actions">
     <%= f.button :submit, :class => 'btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

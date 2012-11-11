@@ -9,6 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require chosen
  *= require_tree .
  */
 .simple_form label { float: left; width: 100px; text-align: right; margin: 2px 10px; }

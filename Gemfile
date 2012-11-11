@@ -14,6 +14,7 @@ gem "therubyracer"
 	gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 #gem 'acts-as-taggable-on'
 
+gem 'chosen-rails'
 group :development, :test do
 gem 'sqlite3', '1.3.5'
 gem 'rspec-rails', '2.10.0'
