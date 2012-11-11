@@ -1,9 +1,9 @@
 <%- model_class = Post -%>
 <div id="tag_cloud">
   <% tag_cloud Post.tag_counts, %w[s m l] do |tag, css_class| %>
-    <%= link_to tag.name + " ( #{tag.posts.size} ) ", tag_path(tag.name), class: css_class %>
+    <%= link_to tag.name + " ( #{tag.posts.size}.to_s ) ", tag_path(tag.name), class: css_class %>
   <% end %>
-  <%= link_to "All ( #{Tag.count} ) ", posts_path, class: "l" %>
+  <%= link_to "All ( #{Tag.count}.to_s ) ", posts_path, class: "l" %>
 </div>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
